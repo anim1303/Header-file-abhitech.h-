@@ -1,4 +1,3 @@
-# Header-file-abhitech.h-
 #ifndef CODES_CONIO
 #define CODES_CONIO
 #include<stdio.h>
@@ -53,7 +52,7 @@ void textcolor(int ForgC)
           wColor = (csbi.wAttributes & 0xF0) + (ForgC & 0x0F) ; // + (1<<x);
           SetConsoleTextAttribute(hStdOut, wColor);
           //printf("\nHELLO THERE  %d ",wColor);
-         // getch();
+         // _getch();
         }
      }
      return;
@@ -211,10 +210,10 @@ int showMenu( char a[][40], int RN,int TR,int TC,int CUR,int fg,int bg ,int hot)
             }
 
            fflush(stdin);
-           ch=getch();
+           ch=_getch();
            if(ch==0||ch==-32)
            {
-                ch=getch();
+                ch=_getch();
                 switch(ch)
                 {
                       case 72:
